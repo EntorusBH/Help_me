@@ -1,17 +1,20 @@
 #include <stdio.h>
 
-int main() {   // https://www.acmicpc.net/problem/2562
+int main() {
 	int i,M,a;
 	int p=1;
 	scanf("%d \n", &M);
-	for (i=1;i<8;i++) { 
+	for (i=1;i<=8;i++) {  // 구름 ide로 구현했을 때 문제에서 제시된 예시를 다 입력했는데도 하나를 더 입력해야 되는데
+				 막상 그 숫자는 의미 없어. 85가 최대값인 예시에 마지막 수를 87 넣었는데도 85가 나와
+				 체계상의 문제인걸까? (그러니 총 10개의 숫자를 입력받아야 하는)
 		scanf("%d \n", &a);
 		if (a>M) {
 			M=a;
 			p=i+1;
-		} // 예제 대입하면 잘 되는데, 100 이상의 값을 으면 팅기는 코드가 없어서 오류 나는거 같은데. 팅기게 하는 법을 모르겠어
+		}
 	}
 	printf("%d \n", M);
 	printf("%d", p);
 	return 0;
 }
+

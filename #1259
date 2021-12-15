@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+	char S[5];
+	for(;;) {
+		scanf("%s", S);
+		if (S[0]=='0') break;
+		else if (strlen(S)==1) printf("yes");
+		else if (strlen(S)==3 && S[0]==S[2]) printf("yes");
+		else if (strlen(S)==5 && S[0]==S[4] && S[1]==S[3]) printf("yes");
+		else printf("no");
+		printf("\n");
+	}
+} // 뭐가 문젠지 모르겠습니다!
